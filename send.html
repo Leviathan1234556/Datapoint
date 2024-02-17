@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DataPoint</title>
+  <link href="https://fonts.googleapis.com/css?family=Product+Sans&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Product Sans', sans-serif;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #sidebar {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 180px;
+      padding-top: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    #sidebar h1,
+    #sidebar ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    #sidebar h1 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    #sidebar .menu-button {
+      background-color: transparent;
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.6s;
+      display: block;
+      width: 100%;
+      text-align: left;
+      border-radius: 15px;
+    }
+
+    #sidebar .menu-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .login-container {
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      max-width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .login-input {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .login-button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .login-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Send</h2>
+    <div id="sidebar">
+      <h1>Data Point</h1>
+      <button class="menu-button" onclick="openContentInNewWindow('dashboard.html')"><i
+          class="fas fa-tachometer-alt"></i>
+        Dashboard</button>
+      <button class="menu-button" onclick="openContentInNewWindow('send.html')"><i class="fas fa-paper-plane"></i>
+        Send</button>
+      <button class="menu-button" onclick="openContentInNewWindow('receive.html')"><i class="fas fa-inbox"></i>
+        Receive</button>
+    </div>
+    <form class="login-form">
+      <input type="text" class="login-input" placeholder="From Address" required>
+      <input type="text" class="login-input" placeholder="Amount" required>
+      <input type="password" class="login-input" id="password" placeholder="To Address" required>
+      <button type="button" class="login-button" onclick="proceedWithSend()">Proceed</button>
+    </form>
+  </div>
+
+  <script>
+    function proceedWithSend() {
+      // Implement logic to proceed with the send action
+      console.log('Sending...');
+      window.location.href = 'ha.html'; // Redirect to ha.html
+    }
+  </script>
+</body>
+
+</html>

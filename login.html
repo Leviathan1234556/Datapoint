@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataPoint Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Product+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login-style.css">
+</head>
+
+<body>
+  <div id="login-container">
+    <h1>Welcome to DataPoint</h1>
+    <form onsubmit="validateForm(event)">
+      <div class="form-group">
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" name="userId" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="form-group checkbox-container">
+        <input type="checkbox" id="rememberMe" name="rememberMe">
+        <label for="rememberMe">Remember me</label>
+      </div>
+
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get user input values
+      var userId = document.getElementById("userId").value;
+      var password = document.getElementById("password").value;
+
+      // Check if the provided credentials are valid
+      if (userId === "datapoint" && password === "123") {
+        // Redirect to test.html
+        window.location.href = "test.html";
+      } else {
+        // Display an error message (you can customize this part)
+        alert("Invalid user ID or password. Please try again.");
+      }
+    }
+  </script>
+</body>
+
+</html>

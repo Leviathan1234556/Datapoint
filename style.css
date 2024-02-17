@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1e5799 0%, #2ce0bf 19%, #76dd2c 40%, #dba62b 60%, #e02cbf 83%, #1e5799 100%);
+  background-size: 10000px 100%;
+  animation: bg 50s linear infinite;
+  /* Increased animation duration to slow down the color change */
+}
+
+@keyframes bg {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 10000px;
+  }
+}
+
+#sidebar {
+  position: fixed;
+  left: 0;
+  /* Move the sidebar to the left */
+  top: 0;
+  height: 100%;
+  width: 180px;
+  /* Slightly smaller width */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* More translucent black background */
+  padding-top: 20px;
+  border-radius: 15px;
+  /* Rounded corners */
+  overflow: hidden;
+  /* Ensure overflow doesn't disrupt rounded corners */
+}
+
+#sidebar h1 {
+  font-family: 'Product Sans', sans-serif;
+  /* Use Product Sans font */
+  font-size: 24px;
+  /* Increased font size */
+  font-weight: 600;
+  /* Adjust font weight if needed */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  /* Center the heading */
+  margin-bottom: 20px;
+  /* Add some space between heading and options */
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar li {
+  padding: 15px;
+  /* Keep padding for bigger options */
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  /* Keep font size */
+  transition: background-color 0.6s;
+  /* Slower transition duration */
+  border-radius: 15px;
+  /* Rounded corners for list items */
+}
+
+#sidebar li.active,
+#sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Semi-translucent white on hover or when the option is active */
+}
+
+}
+
+#content {
+  margin-left: 180px;
+  /* Adjust this value based on the sidebar width */
+  padding: 20px;
+}
+
+#content h2:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Semi-translucent white on hover */
+}
+
+.authentication-text {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.authenticate-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Use the same translucent black background color as the sidebar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.6s;
+  /* Slower transition duration */
+}
+
+.authenticate-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Semi-translucent white on hover */
+}
